@@ -6,6 +6,11 @@
     <string name="sign_up">Register</string>
     <string name="add_foods_to_db">Add Foods Record</string>
 
+    <!-- Food Page-->
+    <string name="food_name_hint">Enter Food</string>
+    <string name="food_id_hint">Enter Food ID</string>
+    <string name="click_button">Submit</string>
+
     <!-- Common User Page -->
     <string name="database_page">Go To Food</string>
     <string name="history_page">User History</string>
@@ -22,4 +27,11 @@
     <string name="height_hint">Enter Your Height</string>
     <string name="weight_hint">Enter Your Weight</string>
     <string name="register_user">Register</string>
+
+    <!-- User Home Page -->
+    <string name="food_click">Enter Food</string>
+    <string name="recommend_click">Get Recommend</string>
+    <string name="current_activity">See Today Activity</string>
+    <string name="history_activity">See History</string>
 </resources>
+
