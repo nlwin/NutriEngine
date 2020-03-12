@@ -10,6 +10,15 @@
     <string name="history_page">User History</string>
     <string name="today_summary">Today Summary</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- User Login in-->
+    <string name="login_user"> Log In</string>
+    <string name="user_hint">Enter User Name</string>
+
+    <!-- User Register -->
+    <string name="register_text">User Registration</string>
+    <string name="name_hint">Enter Your Name</string>
+    <string name="age_hint">Enter Your Age</string>
+    <string name="height_hint">Enter Your Height</string>
+    <string name="weight_hint">Enter Your Weight</string>
+    <string name="register_user">Register</string>
 </resources>
