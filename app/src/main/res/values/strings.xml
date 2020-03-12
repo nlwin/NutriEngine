@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">NutriEngine</string>
+    <!-- Home Page-->
+    <string name="home_welcome">Welcome to Eatrition</string>
+    <string name="logging_in">Log In</string>
+    <string name="sign_up">Register</string>
+
+    <!-- Common User Page -->
+    <string name="database_page">Go To Food</string>
+    <string name="history_page">User History</string>
+    <string name="today_summary">Today Summary</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
