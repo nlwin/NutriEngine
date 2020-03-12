@@ -4,6 +4,7 @@
     <string name="home_welcome">Welcome to Eatrition</string>
     <string name="logging_in">Log In</string>
     <string name="sign_up">Register</string>
+    <string name="add_foods_to_db">Add Foods Record</string>
 
     <!-- Common User Page -->
     <string name="database_page">Go To Food</string>
