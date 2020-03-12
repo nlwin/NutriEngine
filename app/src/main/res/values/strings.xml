@@ -31,7 +31,10 @@
     <!-- User Home Page -->
     <string name="food_click">Enter Food</string>
     <string name="recommend_click">Get Recommend</string>
-    <string name="current_activity">See Today Activity</string>
-    <string name="history_activity">See History</string>
+    <string name="current_activity_click">See Today Activity</string>
+    <string name="history_activity_click">See History</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
 

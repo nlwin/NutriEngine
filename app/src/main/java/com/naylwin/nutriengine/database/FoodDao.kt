@@ -1,5 +1,6 @@
 package com.naylwin.eatrition.database
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
@@ -18,7 +19,7 @@ interface FoodDao {
     fun getShortSummary(key: Int): Food?
 
     @Query("SELECT * FROM food_summary_table WHERE food_desc LIKE :foodStr")
-    fun findFoods(foodStr: String): List<Food?>
+    fun findFoods(foodStr: String): LiveData<List<Food?>>
 
 }
 
