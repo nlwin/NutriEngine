@@ -1,5 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
 
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.naylwin.nutriengine.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.naylwin.nutriengine.usertracker.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_userHomeFragment"
+            app:destination="@id/userHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.naylwin.nutriengine.usertracker.RegisterFragment"
+        android:label="RegisterFragment" >
+        <action
+            android:id="@+id/action_registerFragment_to_userHomeFragment"
+            app:destination="@id/userHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userHomeFragment"
+        android:name="com.naylwin.nutriengine.usertracker.UserHomeFragment"
+        android:label="UserHomeFragment" >
+        <action
+            android:id="@+id/action_userHomeFragment_to_foodFragment"
+            app:destination="@id/foodFragment" />
+        <action
+            android:id="@+id/action_userHomeFragment_to_currentFragment"
+            app:destination="@id/currentFragment" />
+        <action
+            android:id="@+id/action_userHomeFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <argument
+            android:name="user_id"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodFragment"
+        android:name="com.naylwin.nutriengine.foodtracker.FoodFragment"
+        android:label="FoodFragment" >
+        <action
+            android:id="@+id/action_foodFragment_to_currentFragment"
+            app:destination="@id/currentFragment" />
+        <argument
+            android:name="username"
+            app:argType="string"
+            android:defaultValue="personA" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.naylwin.nutriengine.usertracker.HistoryFragment"
+        android:label="HistoryFragment" >
+        <action
+            android:id="@+id/action_historyFragment_to_userHomeFragment"
+            app:destination="@id/userHomeFragment"
+            app:popUpTo="@+id/userHomeFragment" />
+        <argument
+            android:name="username"
+            app:argType="string"
+            android:defaultValue="personA" />
+    </fragment>
+    <fragment
+        android:id="@+id/currentFragment"
+        android:name="com.naylwin.nutriengine.usertracker.CurrentFragment"
+        android:label="CurrentFragment" >
+        <action
+            android:id="@+id/action_currentFragment_to_userHomeFragment"
+            app:destination="@id/userHomeFragment"
+            app:popUpTo="@+id/userHomeFragment" />
+        <argument
+            android:name="username"
+            app:argType="string"
+            android:defaultValue="personA" />
+    </fragment>
 </navigation>

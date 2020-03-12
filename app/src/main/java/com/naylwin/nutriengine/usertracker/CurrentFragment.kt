@@ -21,5 +21,4 @@ class CurrentFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_current, container, false)
     }
 
-
 }

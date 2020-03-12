@@ -16,7 +16,7 @@ interface FoodDao {
     fun update(food: Food)
 
     @Query("SELECT * FROM food_summary_table WHERE foodId = :key")
-    fun getShortSummary(key: Int): Food?
+    fun getFoodStats(key: Int): Food?
 
     @Query("SELECT * FROM food_summary_table WHERE food_desc LIKE :foodStr")
     fun findFoods(foodStr: String): LiveData<List<Food?>>
