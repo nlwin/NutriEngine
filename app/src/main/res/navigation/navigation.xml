@@ -35,9 +35,6 @@
         android:name="com.naylwin.nutriengine.usertracker.RegisterFragment"
         android:label="RegisterFragment" >
         <action
-            android:id="@+id/action_registerFragment_to_userHomeFragment"
-            app:destination="@id/userHomeFragment" />
-        <action
             android:id="@+id/action_registerFragment_to_homeFragment"
             app:destination="@id/homeFragment"
             app:popUpTo="@+id/homeFragment" />
@@ -59,6 +56,12 @@
             android:name="user_id"
             app:argType="integer"
             android:defaultValue="-1" />
+        <action
+            android:id="@+id/action_userHomeFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="date"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/foodFragment"
@@ -71,6 +74,15 @@
             android:name="username"
             app:argType="string"
             android:defaultValue="personA" />
+        <action
+            android:id="@+id/action_foodFragment_to_userHomeFragment"
+            app:destination="@id/userHomeFragment" />
+        <action
+            android:id="@+id/action_foodFragment_to_userHomeFragment2"
+            app:destination="@id/userHomeFragment" />
+        <argument
+            android:name="date"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/historyFragment"
@@ -97,5 +109,8 @@
             android:name="username"
             app:argType="string"
             android:defaultValue="personA" />
+        <argument
+            android:name="date"
+            app:argType="string" />
     </fragment>
 </navigation>

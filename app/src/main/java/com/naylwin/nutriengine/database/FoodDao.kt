@@ -18,7 +18,7 @@ interface FoodDao {
     @Query("SELECT * FROM food_summary_table WHERE foodId = :key")
     fun getFoodStats(key: Int): Food?
 
-    @Query("SELECT * FROM food_summary_table WHERE food_desc LIKE :foodStr")
+    @Query("SELECT * FROM food_summary_table WHERE food_desc LIKE :foodStr LIMIT 10")
     fun findFoods(foodStr: String): LiveData<List<Food?>>
 
     @Query("SELECT * FROM food_summary_table LIMIT 1")

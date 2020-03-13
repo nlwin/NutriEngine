@@ -34,5 +34,147 @@
         tools:context=".usertracker.CurrentFragment">
 
 
+        <TextView
+            android:id="@+id/sugar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/sugar"
+            app:layout_constraintEnd_toEndOf="@+id/calories_text"
+            app:layout_constraintStart_toStartOf="@+id/calories_text"
+            app:layout_constraintTop_toBottomOf="@+id/calories_text" />
+
+        <TextView
+            android:id="@+id/name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="PersonA" />
+
+        <TextView
+            android:id="@+id/cal_amount_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="100dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/calories_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            tools:text="None" />
+
+        <TextView
+            android:id="@+id/sugar_amt_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@+id/sugar_text"
+            app:layout_constraintEnd_toEndOf="@+id/cal_amount_text"
+            app:layout_constraintStart_toStartOf="@+id/cal_amount_text"
+            tools:text="None" />
+
+        <TextView
+            android:id="@+id/sodim_amt_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@+id/sodium_text"
+            app:layout_constraintEnd_toEndOf="@+id/sugar_amt_text"
+            app:layout_constraintStart_toStartOf="@+id/sugar_amt_text"
+            tools:text="None" />
+
+        <TextView
+            android:id="@+id/vitc_amt_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@+id/vit_c_text"
+            app:layout_constraintEnd_toEndOf="@+id/sodim_amt_text"
+            app:layout_constraintStart_toStartOf="@+id/sodim_amt_text"
+            tools:text="None" />
+
+        <TextView
+            android:id="@+id/calories_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="50dp"
+            android:text="@string/calories"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_text"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/sodium_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/sodium"
+            app:layout_constraintEnd_toEndOf="@+id/sugar_text"
+            app:layout_constraintStart_toStartOf="@+id/sugar_text"
+            app:layout_constraintTop_toBottomOf="@+id/sugar_text" />
+
+        <TextView
+            android:id="@+id/vit_c_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/vit_c"
+            app:layout_constraintEnd_toEndOf="@+id/sodium_text"
+            app:layout_constraintStart_toStartOf="@+id/sodium_text"
+            app:layout_constraintTop_toBottomOf="@+id/sodium_text" />
+
+        <TextView
+            android:id="@+id/vit_a_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/vit_a"
+            app:layout_constraintEnd_toEndOf="@+id/vit_c_text"
+            app:layout_constraintStart_toStartOf="@+id/vit_c_text"
+            app:layout_constraintTop_toBottomOf="@+id/vit_c_text" />
+
+        <TextView
+            android:id="@+id/vita_amt_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@+id/vit_a_text"
+            app:layout_constraintEnd_toEndOf="@+id/vitc_amt_text"
+            app:layout_constraintStart_toStartOf="@+id/vitc_amt_text"
+            tools:text="None" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="195dp"
+            android:layout_marginEnd="216dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintGuide_begin="205dp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/goback_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="50dp"
+            android:text="@string/go_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vit_a_text"
+            app:layout_constraintVertical_bias="0.502" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

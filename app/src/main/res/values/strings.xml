@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">NutriEngine</string>
+
+    <string name="go_back">Back</string>
     <!-- Home Page-->
     <string name="home_welcome">Welcome to Eatrition</string>
     <string name="logging_in">Log In</string>
@@ -10,6 +12,11 @@
     <string name="food_name_hint">Enter Food</string>
     <string name="food_id_hint">Enter Food ID</string>
     <string name="click_button">Submit</string>
+    <string name="calories">Calories Amt:</string>
+    <string name="sugar">Sugar Amt:</string>
+    <string name="sodium">Sodium Amt:</string>
+    <string name="vit_c">VitaminC Amt:</string>
+    <string name="vit_a">VitaminA Amt:</string>
 
     <!-- Common User Page -->
     <string name="database_page">Go To Food</string>
@@ -19,6 +26,9 @@
     <!-- User Login in-->
     <string name="login_user"> Log In</string>
     <string name="user_hint">Enter User Name</string>
+    <string name="day_hint">Enter Day</string>
+    <string name="month_hint">Enter Month</string>
+    <string name="year_hint">Enter Year</string>
 
     <!-- User Register -->
     <string name="register_text">User Registration</string>
