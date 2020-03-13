@@ -50,14 +50,14 @@
             android:id="@+id/action_userHomeFragment_to_currentFragment"
             app:destination="@id/currentFragment" />
         <action
-            android:id="@+id/action_userHomeFragment_to_historyFragment"
-            app:destination="@id/historyFragment" />
-        <action
             android:id="@+id/action_userHomeFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
         <argument
             android:name="user_info"
             app:argType="string[]" />
+        <action
+            android:id="@+id/action_userHomeFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
     </fragment>
     <fragment
         android:id="@+id/foodFragment"
@@ -82,9 +82,8 @@
             app:destination="@id/userHomeFragment"
             app:popUpTo="@+id/userHomeFragment" />
         <argument
-            android:name="username"
-            app:argType="string"
-            android:defaultValue="personA" />
+            android:name="user_name"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/currentFragment"

@@ -23,7 +23,7 @@ class RegisterFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-         val binding: FragmentRegisterBinding = DataBindingUtil.inflate(
+        val binding: FragmentRegisterBinding = DataBindingUtil.inflate(
                     inflater, R.layout.fragment_register, container, false)
         val application = requireNotNull(this.activity).application
         val dataSource = FoodDatabase.getInstance(application).userDao

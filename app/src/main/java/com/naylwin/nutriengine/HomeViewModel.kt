@@ -42,9 +42,8 @@ class HomeViewModel(val foodDao: FoodDao, val context: Context) : ViewModel() {
     private suspend fun writingToDatabase() {
         withContext(Dispatchers.IO) {
 
-            var csvReader: CSVReader? = null
             try {
-                csvReader = CSVReader(BufferedReader(InputStreamReader(context.resources.openRawResource(R.raw.food_database))))
+                val csvReader = CSVReader(BufferedReader(InputStreamReader(context.resources.openRawResource(R.raw.food_database))))
                 var foodId: Int = -1
                 var line = csvReader.readNext()
                 while (line != null) {
