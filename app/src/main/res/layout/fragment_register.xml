@@ -24,7 +24,9 @@
          click handlers, and state variables. -->
 
     <data>
-
+    <variable
+        name="registerViewModel"
+        type="com.naylwin.nutriengine.usertracker.RegisterViewModel" />
     </data>
 
     <!-- Start of the visible fragment layout using ConstraintLayout -->

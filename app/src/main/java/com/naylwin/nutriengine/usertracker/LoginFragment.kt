@@ -33,25 +33,25 @@ class LoginFragment : Fragment() {
             .get(LoginViewModel::class.java)
         binding.loginViewModel = loginViewModel
         binding.setLifecycleOwner(this)
-//        binding.loginButton.setOnClickListener{
-//            this.findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToLoginFragment())
-//        }
-//        binding.signupButton.setOnClickListener{
-//            this.findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToRegisterFragment())
-//        }
+
         binding.loginButton.setOnClickListener{
-            val name = binding.nameText.toString()
-            val day = binding.dayText.toString()
-            val month = binding.monthText.toString()
-            val year = binding.yearText.toString()
+            var name = binding.nameText.toString()
+            var day = binding.dayText.toString()
+            var month = binding.monthText.toString()
+            var year = binding.yearText.toString()
             while(name == "" || day == "" || month == "" || year == "") {
                 Toast.makeText(this.context, "Please Put Name and Date", Toast.LENGTH_SHORT).show()
+                name = binding.nameText.toString()
+                day = binding.dayText.toString()
+                month = binding.monthText.toString()
+                year = binding.yearText.toString()
             }
             val date = "${day}-${month}-${year}"
             loginViewModel.logInAction(name, date)
             this.findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToUserHomeFragment(
                 arrayOf(name, date)))
         }
+
         binding.gobackButton.setOnClickListener{
             this.findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToHomeFragment())
         }

@@ -34,8 +34,8 @@
     <string name="register_text">User Registration</string>
     <string name="name_hint">Enter Your Name</string>
     <string name="age_hint">Enter Your Age</string>
-    <string name="height_hint">Enter Your Height</string>
-    <string name="weight_hint">Enter Your Weight</string>
+    <string name="height_hint">Enter Your Height in CM</string>
+    <string name="weight_hint">Enter Your Weight in KG</string>
     <string name="register_user">Register</string>
 
     <!-- User Home Page -->
