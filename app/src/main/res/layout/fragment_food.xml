@@ -24,7 +24,9 @@
          click handlers, and state variables. -->
 
     <data>
-
+    <variable
+        name="foodViewModel"
+        type="com.naylwin.nutriengine.foodtracker.FoodViewModel" />
     </data>
 
     <!-- Start of the visible fragment layout using ConstraintLayout -->

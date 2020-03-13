@@ -21,4 +21,9 @@ class RegisterViewModel(private val userDao: UserDao) : ViewModel(){
             userDao.insert(user)
         }
     }
+
+    override fun onCleared() {
+        super.onCleared()
+        viewModelJob.cancel()
+    }
 }

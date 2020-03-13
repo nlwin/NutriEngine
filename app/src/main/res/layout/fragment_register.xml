@@ -24,9 +24,10 @@
          click handlers, and state variables. -->
 
     <data>
-    <variable
-        name="registerViewModel"
-        type="com.naylwin.nutriengine.usertracker.RegisterViewModel" />
+
+        <variable
+            name="registerViewModel"
+            type="com.naylwin.nutriengine.usertracker.RegisterViewModel" />
     </data>
 
     <!-- Start of the visible fragment layout using ConstraintLayout -->
@@ -44,7 +45,7 @@
             android:layout_marginEnd="10dp"
             android:ems="10"
             android:hint="@string/name_hint"
-            android:inputType="textPersonName"
+            android:inputType="text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.561"
             app:layout_constraintStart_toStartOf="parent"
@@ -57,7 +58,7 @@
             android:layout_marginTop="20dp"
             android:ems="10"
             android:hint="@string/age_hint"
-            android:inputType="textPersonName"
+            android:inputType="text"
             app:layout_constraintEnd_toEndOf="@+id/name_text"
             app:layout_constraintStart_toStartOf="@+id/name_text"
             app:layout_constraintTop_toBottomOf="@+id/name_text" />
@@ -69,7 +70,7 @@
             android:layout_marginTop="20dp"
             android:ems="10"
             android:hint="@string/height_hint"
-            android:inputType="textPersonName"
+            android:inputType="text"
             app:layout_constraintEnd_toEndOf="@+id/age_text"
             app:layout_constraintStart_toStartOf="@+id/age_text"
             app:layout_constraintTop_toBottomOf="@+id/age_text" />
@@ -81,7 +82,7 @@
             android:layout_marginTop="20dp"
             android:ems="10"
             android:hint="@string/weight_hint"
-            android:inputType="textPersonName"
+            android:inputType="text"
             app:layout_constraintEnd_toEndOf="@+id/height_text"
             app:layout_constraintStart_toStartOf="@+id/height_text"
             app:layout_constraintTop_toBottomOf="@+id/height_text" />

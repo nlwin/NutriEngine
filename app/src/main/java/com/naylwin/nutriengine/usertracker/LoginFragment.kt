@@ -35,16 +35,16 @@ class LoginFragment : Fragment() {
         binding.setLifecycleOwner(this)
 
         binding.loginButton.setOnClickListener{
-            var name = binding.nameText.toString()
-            var day = binding.dayText.toString()
-            var month = binding.monthText.toString()
-            var year = binding.yearText.toString()
+            var name = binding.nameText.text.toString()
+            var day = binding.dayText.text.toString()
+            var month = binding.monthText.text.toString()
+            var year = binding.yearText.text.toString()
             while(name == "" || day == "" || month == "" || year == "") {
                 Toast.makeText(this.context, "Please Put Name and Date", Toast.LENGTH_SHORT).show()
-                name = binding.nameText.toString()
-                day = binding.dayText.toString()
-                month = binding.monthText.toString()
-                year = binding.yearText.toString()
+                name = binding.nameText.text.toString()
+                day = binding.dayText.text.toString()
+                month = binding.monthText.text.toString()
+                year = binding.yearText.text.toString()
             }
             val date = "${day}-${month}-${year}"
             loginViewModel.logInAction(name, date)

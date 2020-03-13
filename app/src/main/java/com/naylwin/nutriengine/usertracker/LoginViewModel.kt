@@ -31,4 +31,9 @@ class LoginViewModel(private var userActivityDao: UserActivityDao) : ViewModel()
             userActivityDao.insert(UserActivity(user_name = name, date=date))
         }
     }
+
+    override fun onCleared() {
+        super.onCleared()
+        viewModelJob.cancel()
+    }
 }

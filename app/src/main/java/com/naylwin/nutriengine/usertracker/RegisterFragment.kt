@@ -2,6 +2,7 @@ package com.naylwin.nutriengine.usertracker
 
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -34,17 +35,18 @@ class RegisterFragment : Fragment() {
         binding.setLifecycleOwner(this)
 
         binding.registerButton.setOnClickListener{
-            var name = binding.nameText.toString()
-            var age = binding.ageText.toString()
-            var height = binding.heightText.toString()
-            var weight = binding.weightText.toString()
+            var name = binding.nameText.text.toString()
+            var age = binding.ageText.text.toString()
+            var height = binding.heightText.text.toString()
+            var weight = binding.weightText.text.toString()
             while(name == "" || age == "" || height == "" || weight == ""){
                 Toast.makeText(this.context, "Please Enter Full Information", Toast.LENGTH_SHORT).show()
-                name = binding.nameText.toString()
-                age = binding.ageText.toString()
-                height = binding.heightText.toString()
-                weight = binding.weightText.toString()
+                name = binding.nameText.text.toString()
+                age = binding.ageText.text.toString()
+                height = binding.heightText.text.toString()
+                weight = binding.weightText.text.toString()
             }
+            Log.d("RegisterFragment", "name:${name} age:${age} height:${height} weight:${weight}")
             registerViewModel.registerUser(name, age.toInt(), height.toInt(), weight.toInt())
             this.findNavController().navigate(RegisterFragmentDirections.actionRegisterFragmentToHomeFragment())
         }
