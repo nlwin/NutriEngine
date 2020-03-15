@@ -18,7 +18,10 @@ interface UserActivityDao {
     @Query("SELECT * FROM activity_table WHERE user_name=:username AND date=:date")
     fun getUserActivity(username: String, date: String): UserActivity?
 
+    @Query("SELECT * FROM activity_table WHERE user_name=:username AND date=:date")
+    fun getLiveUserActivity(username: String, date: String): LiveData<UserActivity?>
+
     @Query("SELECT * FROM activity_table WHERE user_name = :username")
-    fun getUserActivities(username: String) : LiveData<List<UserActivity>>
+    fun getUserActivities(username: String) : LiveData<List<UserActivity?>>
 
 }

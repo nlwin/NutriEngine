@@ -34,6 +34,7 @@ class LoginFragment : Fragment() {
         binding.loginViewModel = loginViewModel
         binding.setLifecycleOwner(this)
 
+
         binding.loginButton.setOnClickListener{
             var name = binding.nameText.text.toString()
             var day = binding.dayText.text.toString()

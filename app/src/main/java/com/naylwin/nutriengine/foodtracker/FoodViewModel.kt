@@ -49,7 +49,6 @@ class FoodViewModel(
         }
     }
 
-
     private suspend fun updateUserActivity(userName: String, date: String, food: Food) {
         withContext(Dispatchers.IO) {
             val userActivity = userActivityDao.getUserActivity(userName, date)
@@ -68,9 +67,8 @@ class FoodViewModel(
 
     override fun onCleared() {
         super.onCleared()
+        Log.i("FoodViewModel", "it is destroyed------------------")
         viewModelJob.cancel()
     }
-
-
 
 }

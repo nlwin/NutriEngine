@@ -1,10 +1,15 @@
 package com.naylwin.nutriengine
 
+import android.app.Activity
+import android.content.Context
 import android.os.Build
 import android.text.Html
 import android.text.Spanned
+import android.view.View
+import android.view.inputmethod.InputMethodManager
 import androidx.core.text.HtmlCompat
 import com.naylwin.eatrition.database.Food
+
 
 fun formatFood(foodList: List<Food?>): Spanned {
     val sb = StringBuilder()
@@ -28,6 +33,7 @@ fun formatFood(foodList: List<Food?>): Spanned {
             append("<br>")
             append("<br>")
         }
+        append("<br><br><br><br><br><br>")
     }
 
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
@@ -37,3 +43,9 @@ fun formatFood(foodList: List<Food?>): Spanned {
     }
 }
 
+// hide the virtual keyboard that pop up on the screen
+fun hideKeyboardFrom(context: Context, view: View) {
+    val imm: InputMethodManager =
+        context.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+    imm.hideSoftInputFromWindow(view.getWindowToken(), 0)
+}
