@@ -58,6 +58,9 @@
         <action
             android:id="@+id/action_userHomeFragment_to_historyFragment"
             app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_userHomeFragment_to_recommendFragment"
+            app:destination="@id/recommendFragment" />
     </fragment>
     <fragment
         android:id="@+id/foodFragment"
@@ -91,6 +94,19 @@
         android:label="CurrentFragment" >
         <action
             android:id="@+id/action_currentFragment_to_userHomeFragment"
+            app:destination="@id/userHomeFragment"
+            app:popUpTo="@+id/userHomeFragment" />
+        <argument
+            android:name="user_info"
+            app:argType="string[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/recommendFragment"
+        android:name="com.naylwin.nutriengine.RecommendFragment"
+        android:label="fragment_recommend"
+        tools:layout="@layout/fragment_recommend" >
+        <action
+            android:id="@+id/action_recommendFragment_to_userHomeFragment"
             app:destination="@id/userHomeFragment"
             app:popUpTo="@+id/userHomeFragment" />
         <argument

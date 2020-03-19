@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">NutriEngine</string>
+    <string name="textview">TextView</string>
+    <string name="todo">TODO</string>
 
     <string name="go_back">Back</string>
     <!-- Home Page-->

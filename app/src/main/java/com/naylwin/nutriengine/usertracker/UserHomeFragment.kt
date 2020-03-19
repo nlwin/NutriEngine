@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -36,9 +37,18 @@ class UserHomeFragment : Fragment() {
             this.findNavController().navigate(UserHomeFragmentDirections.actionUserHomeFragmentToHistoryFragment(arguments.userInfo))
         }
 
+        // restaurants recommendation using GPS location (not working!!)
+//        binding.recommendButton.setOnClickListener {
+//            this.findNavController().navigate(UserHomeFragmentDirections.actionUserHomeFragmentToRecommendFragment(arguments.userInfo))
+//        }
+        binding.recommendButton.setOnClickListener {
+            Toast.makeText(context, "Here is recommended Place ", Toast.LENGTH_SHORT).show()
+        }
+
         binding.goBackButton.setOnClickListener {
             this.findNavController().navigate(UserHomeFragmentDirections.actionUserHomeFragmentToHomeFragment())
         }
+
        return binding.root
     }
 
