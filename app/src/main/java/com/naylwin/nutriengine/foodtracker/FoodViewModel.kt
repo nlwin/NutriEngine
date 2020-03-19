@@ -22,7 +22,7 @@ class FoodViewModel(
         val foodList = runBlocking {
            getPossibleFoodList(foodName)
         }
-        Log.d("FoodViewModel", "${foodList.size}")
+//        Log.d("FoodViewModel", "${foodList.size}")
         return foodList
     }
 
@@ -37,7 +37,7 @@ class FoodViewModel(
             val food = findFoodByID(foodID)
             if (food != null) {
                 updateUserActivity(userName, date, food)
-                Toast.makeText(context, "Succeessfully Add Food", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Successfully Add Food", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -52,6 +52,7 @@ class FoodViewModel(
     private suspend fun updateUserActivity(userName: String, date: String, food: Food) {
         withContext(Dispatchers.IO) {
             val userActivity = userActivityDao.getUserActivity(userName, date)
+            Log.d("FoodViewModel", "${userActivity}")
             if (userActivity != null) {
                 userActivity.apply {
                     calories += food.calories
@@ -67,7 +68,7 @@ class FoodViewModel(
 
     override fun onCleared() {
         super.onCleared()
-        Log.i("FoodViewModel", "it is destroyed------------------")
+//        Log.d("FoodViewModel", "it is destroyed------------------")
         viewModelJob.cancel()
     }
 

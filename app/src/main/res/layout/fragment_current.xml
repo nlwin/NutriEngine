@@ -24,7 +24,9 @@
          click handlers, and state variables. -->
 
     <data>
-
+        <variable
+            name="currentViewModel"
+            type="com.naylwin.nutriengine.usertracker.CurrentViewModel" />
     </data>
 
     <!-- Start of the visible fragment layout using ConstraintLayout -->
@@ -38,7 +40,7 @@
             android:id="@+id/sugar_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="40dp"
             android:text="@string/sugar"
             app:layout_constraintEnd_toEndOf="@+id/calories_text"
             app:layout_constraintStart_toStartOf="@+id/calories_text"
@@ -52,6 +54,8 @@
             android:layout_marginTop="40dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="50dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -80,7 +84,7 @@
             tools:text="None" />
 
         <TextView
-            android:id="@+id/sodim_amt_text"
+            android:id="@+id/sodium_amt_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBaseline_toBaselineOf="@+id/sodium_text"
@@ -93,8 +97,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBaseline_toBaselineOf="@+id/vit_c_text"
-            app:layout_constraintEnd_toEndOf="@+id/sodim_amt_text"
-            app:layout_constraintStart_toStartOf="@+id/sodim_amt_text"
+            app:layout_constraintEnd_toEndOf="@+id/sodium_amt_text"
+            app:layout_constraintStart_toStartOf="@+id/sodium_amt_text"
             tools:text="None" />
 
         <TextView
@@ -102,21 +106,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
-            android:layout_marginTop="50dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="40dp"
             android:text="@string/calories"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/name_text"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/date_text"
+            app:layout_constraintVertical_bias="0.077" />
 
         <TextView
             android:id="@+id/sodium_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="40dp"
             android:text="@string/sodium"
             app:layout_constraintEnd_toEndOf="@+id/sugar_text"
             app:layout_constraintStart_toStartOf="@+id/sugar_text"
@@ -126,7 +129,7 @@
             android:id="@+id/vit_c_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="40dp"
             android:text="@string/vit_c"
             app:layout_constraintEnd_toEndOf="@+id/sodium_text"
             app:layout_constraintStart_toStartOf="@+id/sodium_text"
@@ -136,7 +139,7 @@
             android:id="@+id/vit_a_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="40dp"
             android:text="@string/vit_a"
             app:layout_constraintEnd_toEndOf="@+id/vit_c_text"
             app:layout_constraintStart_toStartOf="@+id/vit_c_text"
@@ -167,14 +170,36 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
-            android:layout_marginTop="50dp"
             android:layout_marginEnd="50dp"
             android:layout_marginBottom="50dp"
             android:text="@string/go_back"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/update_button" />
+
+        <Button
+            android:id="@+id/update_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/update_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/vit_a_text"
-            app:layout_constraintVertical_bias="0.502" />
+            app:layout_constraintVertical_bias="0.462" />
+
+        <TextView
+            android:id="@+id/date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_text"
+            tools:text="Date" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

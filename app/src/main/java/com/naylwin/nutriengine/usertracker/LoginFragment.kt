@@ -47,7 +47,7 @@ class LoginFragment : Fragment() {
                 month = binding.monthText.text.toString()
                 year = binding.yearText.text.toString()
             }
-            val date = "${day}-${month}-${year}"
+            val date = "${month}/${day}/${year}"
             loginViewModel.logInAction(name, date)
             this.findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToUserHomeFragment(
                 arrayOf(name, date)))
@@ -57,10 +57,6 @@ class LoginFragment : Fragment() {
             this.findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToHomeFragment())
         }
         return binding.root
-    }
-
-    fun loginUser(){
-
     }
 
 }

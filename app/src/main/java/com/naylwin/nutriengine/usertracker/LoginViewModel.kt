@@ -28,7 +28,7 @@ class LoginViewModel(private var userActivityDao: UserActivityDao) : ViewModel()
     // insert new user activity for specific date
     private suspend fun insert(name: String, date: String){
         withContext(Dispatchers.IO){
-            userActivityDao.insert(UserActivity(user_name = name, date=date))
+            userActivityDao.insert(UserActivity(user_name = name, date = date))
         }
     }
 

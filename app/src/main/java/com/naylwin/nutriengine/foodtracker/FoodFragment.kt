@@ -43,7 +43,6 @@ class FoodFragment : Fragment() {
             foodName = "%${foodName}%"
             val foodList = foodViewModel.getFood(foodName)
             binding.textView.text = formatFood(foodList)
-
         }
         binding.foodIdButton.setOnClickListener {
             hideKeyboardFrom(context!!, it)

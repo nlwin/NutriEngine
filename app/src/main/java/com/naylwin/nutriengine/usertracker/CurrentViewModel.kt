@@ -1,7 +1,6 @@
 package com.naylwin.nutriengine.usertracker
 
 import android.util.Log
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import com.naylwin.eatrition.database.UserActivity
 import com.naylwin.eatrition.database.UserActivityDao
@@ -12,18 +11,10 @@ class CurrentViewModel(
     private val name: String,
     private val date: String): ViewModel() {
 
-    lateinit var currentActivity: LiveData<UserActivity?>
     private val viewModelJob = Job()
     private val uiScope= CoroutineScope(Dispatchers.Main + viewModelJob)
 
-    init{
-        uiScope.launch {
-            currentActivity = userActivityDao.getLiveUserActivity(name, date)
-//            if (currentActivity.value == null) {
-//                currentActivity = dummyUser(name, date)
-//            }
-        }
-    }
+
 
     private suspend fun getUserActivity(name: String, date: String): UserActivity?{
         return withContext(Dispatchers.IO){
@@ -35,9 +26,17 @@ class CurrentViewModel(
         return UserActivity(name, date)
     }
 
+    fun updateActivity(name: String, date: String) : UserActivity?{
+        val currentActivity = runBlocking{
+            getUserActivity(name, date)
+           // Log.d("CurrentViewModel:" , "In UpdateBlock ${currentActivity}")
+        }
+        return currentActivity
+    }
+
     override fun onCleared() {
         super.onCleared()
-        Log.i("CurrentViewModel", "Destroyed")
+        Log.d("CurrentViewModel", "Destroyed")
         viewModelJob.cancel()
     }
 }
