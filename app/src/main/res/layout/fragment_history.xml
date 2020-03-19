@@ -24,7 +24,9 @@
          click handlers, and state variables. -->
 
     <data>
-
+    <variable
+        name="historyViewModel"
+        type="com.naylwin.nutriengine.usertracker.HistoryViewModel" />
     </data>
 
     <!-- Start of the visible fragment layout using ConstraintLayout -->
@@ -32,7 +34,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".usertracker.HistoryFragment">
-
 
         <TextView
             android:id="@+id/name_text"

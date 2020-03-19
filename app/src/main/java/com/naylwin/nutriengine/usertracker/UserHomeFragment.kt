@@ -33,7 +33,7 @@ class UserHomeFragment : Fragment() {
         }
 
         binding.historyButton.setOnClickListener{
-            this.findNavController().navigate(UserHomeFragmentDirections.actionUserHomeFragmentToFoodFragment(arguments.userInfo))
+            this.findNavController().navigate(UserHomeFragmentDirections.actionUserHomeFragmentToHistoryFragment(arguments.userInfo))
         }
 
         binding.goBackButton.setOnClickListener {

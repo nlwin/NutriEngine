@@ -12,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 import com.naylwin.eatrition.database.FoodDatabase
 import com.naylwin.nutriengine.R
 import com.naylwin.nutriengine.databinding.FragmentCurrentBinding
+import java.text.DecimalFormat
 
 /**
  * A simple [Fragment] subclass.
@@ -45,16 +46,17 @@ class CurrentFragment : Fragment() {
 
     private fun updatebindingView(binding: FragmentCurrentBinding, name: String , date: String){
        // binding.invalidateAll()
+        val decimalFormat = DecimalFormat("0.00")
         binding.updateButton.setOnClickListener {
                 val userActivity = binding.currentViewModel?.updateActivity(name, date)
                 userActivity?.apply{
                     binding.nameText.text = user_name
                     binding.dateText.text = date
                     binding.calAmountText.text = calories.toString()
-                    binding.sugarAmtText.text = sugar.toString()
-                    binding.sodiumAmtText.text = sodium.toString()
-                    binding.vitcAmtText.text = vit_c.toString()
-                    binding.vitaAmtText.text = vit_a.toString()
+                    binding.sugarAmtText.text = decimalFormat.format(sugar) + "g"
+                    binding.sodiumAmtText.text = sodium.toString() + "mg"
+                    binding.vitcAmtText.text = decimalFormat.format(vit_c) + "mg"
+                    binding.vitaAmtText.text = vit_a.toString() + "rae"
             }
         }
     }

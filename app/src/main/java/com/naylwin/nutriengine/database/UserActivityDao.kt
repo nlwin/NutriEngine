@@ -22,6 +22,6 @@ interface UserActivityDao {
     fun getLiveUserActivity(username: String, date: String): LiveData<UserActivity?>
 
     @Query("SELECT * FROM activity_table WHERE user_name = :username")
-    fun getUserActivities(username: String) : LiveData<List<UserActivity?>>
+    fun getUserActivities(username: String) : List<UserActivity?>
 
 }

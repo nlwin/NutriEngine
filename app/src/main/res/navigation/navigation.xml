@@ -82,8 +82,8 @@
             app:destination="@id/userHomeFragment"
             app:popUpTo="@+id/userHomeFragment" />
         <argument
-            android:name="user_name"
-            app:argType="string" />
+            android:name="user_info"
+            app:argType="string[]" />
     </fragment>
     <fragment
         android:id="@+id/currentFragment"
